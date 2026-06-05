@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Prajapati | Senior Flutter Developer</title>
+    <title>Amit Prajapati | Senior Mobile Developer (Flutter & React)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,6 +22,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="https://drive.google.com/open?id=YOUR_RESUME_ID" target="_blank" class="nav-resume-btn"><i class="fas fa-file-arrow-down"></i> Resume</a></li>
                 <li><a href="#contact" class="nav-hire-btn">Hire Me</a></li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
@@ -39,6 +40,7 @@
         <a href="#experience" onclick="closeMobile()">Experience</a>
         <a href="#projects" onclick="closeMobile()">Projects</a>
         <a href="#contact" onclick="closeMobile()">Contact</a>
+        <a href="https://drive.google.com/open?id=YOUR_RESUME_ID" target="_blank" onclick="closeMobile()"><i class="fas fa-file-arrow-down"></i> Resume</a>
     </div>
 
     <!-- Hero Section -->
@@ -47,7 +49,7 @@
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
-        <div class="particles" id="particles"></div>
+        <canvas id="constellationCanvas" class="constellation-canvas"></canvas>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -55,11 +57,14 @@
                     Available for opportunities
                 </div>
                 <h1 class="hero-name">AMIT <span class="gradient-text">PRAJAPATI</span></h1>
-                <p class="hero-title">Senior Flutter Developer</p>
-                <p class="hero-description">Building high-performance, cross-platform applications with 5.5+ years of experience. From fintech to IoT — I craft scalable solutions that users love.</p>
+                <p class="hero-title">Senior Mobile Developer (Flutter & React)</p>
+                <p class="hero-description">Architecting high-performance, beautiful cross-platform mobile experiences with 5.5+ years of expertise. From robust Flutter applications to dynamic React Native solutions, I craft clean, scalable codebases that users love.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn-primary">
                         <i class="fas fa-rocket"></i> View Projects
+                    </a>
+                    <a href="https://drive.google.com/open?id=YOUR_RESUME_ID" target="_blank" class="btn-secondary resume-btn">
+                        <i class="fas fa-file-arrow-down"></i> Download Resume
                     </a>
                     <a href="#contact" class="btn-secondary">
                         <i class="fas fa-envelope"></i> Get In Touch
@@ -94,11 +99,11 @@
                     </div>
                     <div class="floating-card floating-card-1">
                         <div class="icon" style="background: rgba(99,102,241,0.15); color: #6366f1;">
-                            <i class="fab fa-flutter"></i>
+                            <i class="fas fa-mobile-screen-button"></i>
                         </div>
                         <div>
-                            <div class="fc-text">Flutter Expert</div>
-                            <div class="fc-sub">Cross-Platform</div>
+                            <div class="fc-text">Mobile Expert</div>
+                            <div class="fc-sub">Flutter & React</div>
                         </div>
                     </div>
                     <div class="floating-card floating-card-2">
@@ -147,10 +152,10 @@
                     </div>
                 </div>
                 <div class="about-content reveal reveal-delay-2">
-                    <h2>Senior Flutter Developer based in <span class="gradient-text">Ahmedabad</span></h2>
-                    <p>I'm Amit Prajapati, a Senior Flutter Developer with over 5.5 years of experience building production-grade applications across iOS, Android, Web, and Desktop platforms.</p>
-                    <p>I've delivered 15+ apps including a storytelling app with 100,000+ downloads and a Kanban productivity app with 1,000+ active users. My expertise spans Clean Architecture, AI integrations (Gemini, OpenAI), real-time Bluetooth systems, and in-app payments.</p>
-                    <p>I thrive in agile environments, leading teams and managing full product lifecycles from requirements to deployment on Play Store and App Store.</p>
+                    <h2>Senior Mobile Developer based in <span class="gradient-text">Ahmedabad</span></h2>
+                    <p>I'm Amit Prajapati, a Senior Mobile Developer with over 5.5 years of experience building production-grade applications across iOS, Android, Web, and Desktop platforms using Flutter and React.</p>
+                    <p class="hide-on-mobile">I've delivered 15+ apps including large-scale productivity tools, daily devotionals, IoT-enabled systems, and service booking networks. My expertise spans Clean Architecture, AI integrations (Gemini, OpenAI), real-time Bluetooth systems, and serverless backends.</p>
+                    <p class="hide-on-mobile">I thrive in agile environments, leading teams, conducting code reviews, and managing full product lifecycles from requirements to App Store and Play Store deployment.</p>
                     <div class="about-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-check-circle"></i>
@@ -181,7 +186,16 @@
             </div>
 
             <div class="tech-row reveal">
-                <div class="tech-item"><i class="fab fa-flutter" style="color:#02569B;"></i><span>Flutter</span></div>
+                <div class="tech-item">
+                    <svg viewBox="0 0 256 317" style="width: 2.5rem; height: 2.5rem; margin-bottom: 0.5rem; fill: currentColor;">
+                        <path fill="#47C5FB" d="M158 0 0 158l49 48L255 0zM157 145l-85 85 49 50 49-49 85-86z"/>
+                        <path fill="#00569E" d="m121 280 37 37h97l-85-86z"/>
+                        <path fill="#00B5F8" d="m72 230 48-48 50 49-49 49z"/>
+                        <path fill-opacity=".8" fill="#00569E" d="m121 280 41-14 4-31z"/>
+                    </svg>
+                    <span>Flutter</span>
+                </div>
+                <div class="tech-item"><i class="fab fa-react" style="color:#61DAFB;"></i><span>React Native</span></div>
                 <div class="tech-item"><i class="fab fa-swift" style="color:#FA7343;"></i><span>Swift</span></div>
                 <div class="tech-item"><i class="fab fa-node-js" style="color:#68A063;"></i><span>Node.js</span></div>
                 <div class="tech-item"><i class="fas fa-database" style="color:#FFCA28;"></i><span>Firebase</span></div>
@@ -202,34 +216,38 @@
                 <p class="section-desc">Technologies I work with to build powerful applications.</p>
             </div>
             <div class="skills-grid">
-                <div class="skill-category reveal reveal-delay-1">
+                <div class="skill-category reveal reveal-delay-1" style="--cat-color: var(--accent);">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
                         <h3>Languages & Frameworks</h3>
                     </div>
                     <div class="skill-tags">
                         <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">React.js</span>
                         <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Swift</span>
-                        <span class="skill-tag">SwiftUI</span>
-                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Swift / SwiftUI</span>
                         <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Node.js</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-2">
+                <div class="skill-category reveal reveal-delay-2" style="--cat-color: #a855f7;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-cogs"></i></div>
                         <h3>State Management</h3>
                     </div>
                     <div class="skill-tags">
+                        <span class="skill-tag">Redux / Toolkit</span>
                         <span class="skill-tag">Riverpod</span>
                         <span class="skill-tag">BLoC / Cubit</span>
                         <span class="skill-tag">GetX</span>
                         <span class="skill-tag">Provider</span>
-                        <span class="skill-tag">RxDart</span>
+                        <span class="skill-tag">Zustand</span>
+                        <span class="skill-tag">Context API</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-3">
+                <div class="skill-category reveal reveal-delay-3" style="--cat-color: #3b82f6;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-sitemap"></i></div>
                         <h3>Architecture</h3>
@@ -242,7 +260,7 @@
                         <span class="skill-tag">Scalable Design</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-1">
+                <div class="skill-category reveal reveal-delay-1" style="--cat-color: #10b981;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
                         <h3>Backend & Cloud</h3>
@@ -255,7 +273,7 @@
                         <span class="skill-tag">Analytics</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-2">
+                <div class="skill-category skills-secondary reveal reveal-delay-2" style="--cat-color: #14b8a6;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
                         <h3>Databases</h3>
@@ -267,7 +285,7 @@
                         <span class="skill-tag">Cloud Firestore</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-3">
+                <div class="skill-category skills-secondary reveal reveal-delay-3" style="--cat-color: #ec4899;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-magic"></i></div>
                         <h3>Integrations & Features</h3>
@@ -284,7 +302,7 @@
                         <span class="skill-tag">MetaMask</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-1">
+                <div class="skill-category skills-secondary reveal reveal-delay-1" style="--cat-color: #f59e0b;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-toolbox"></i></div>
                         <h3>Tools & DevOps</h3>
@@ -298,7 +316,7 @@
                         <span class="skill-tag">Agile / Scrum</span>
                     </div>
                 </div>
-                <div class="skill-category reveal reveal-delay-2">
+                <div class="skill-category skills-secondary reveal reveal-delay-2" style="--cat-color: #ef4444;">
                     <div class="skill-cat-header">
                         <div class="skill-cat-icon"><i class="fas fa-fire"></i></div>
                         <h3>Firebase Suite</h3>
@@ -314,6 +332,11 @@
                     </div>
                 </div>
             </div>
+            <div class="skills-toggle-container show-on-mobile" style="text-align: center; margin-top: 2rem;">
+                <button id="toggleSkillsBtn" class="btn-secondary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">
+                    <i class="fas fa-plus"></i> Show All Skills
+                </button>
+            </div>
         </div>
     </section>
 
@@ -325,70 +348,119 @@
                 <h2 class="section-title">Professional Journey</h2>
                 <p class="section-desc">5.5+ years of building impactful products and leading teams.</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot current"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Senior Software Developer</h3>
-                                <span class="company">Tibicle LLP — Ahmedabad</span>
-                            </div>
-                            <span class="timeline-date current">Dec 2025 – Present</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Leading full-cycle cross-platform development of Planboards (1,000+ downloads) — a Kanban productivity app for iOS, Android, Web, macOS, and tablets.</li>
-                            <li>Integrated AI voice-to-task feature using Google Vertex AI (Gemini) and OpenAI Whisper for intelligent task extraction from voice input.</li>
-                            <li>Implemented server-side in-app subscription system with receipt validation using Node.js Cloud Functions.</li>
-                        </ul>
+            <div class="wave-timeline-container reveal">
+                <!-- SVG Wave Line -->
+                <div class="wave-svg-container">
+                    <svg viewBox="0 0 1000 200" preserveAspectRatio="none" class="wave-line-svg">
+                        <!-- Curved Path representing valleys and peaks -->
+                        <path d="M 0,100 C 150,20 200,180 350,100 C 500,20 550,180 700,100 C 850,20 900,180 1000,100" 
+                              fill="none" stroke="url(#wave-gradient)" stroke-width="4" stroke-linecap="round" class="wave-path"/>
+                        
+                        <!-- Gradient definition -->
+                        <defs>
+                            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#6366f1" />
+                                <stop offset="50%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#22c55e" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <!-- Interactive Company Nodes along the wave curve -->
+                    <div class="wave-node" style="left: 15%; top: 35%;" data-index="0" title="KarmaLeen Technology">
+                        <div class="node-dot"></div>
+                        <span class="node-year">2020</span>
+                        <span class="node-company-label">KarmaLeen</span>
+                    </div>
+                    
+                    <div class="wave-node" style="left: 40%; top: 60%;" data-index="1" title="Codzgarage Infotech">
+                        <div class="node-dot"></div>
+                        <span class="node-year">2023</span>
+                        <span class="node-company-label">Codzgarage</span>
+                    </div>
+                    
+                    <div class="wave-node" style="left: 65%; top: 32%;" data-index="2" title="Vrinsoft Technology">
+                        <div class="node-dot"></div>
+                        <span class="node-year">2024</span>
+                        <span class="node-company-label">Vrinsoft</span>
+                    </div>
+                    
+                    <div class="wave-node active" style="left: 90%; top: 65%;" data-index="3" title="Tibicle LLP">
+                        <div class="node-dot current"></div>
+                        <span class="node-year">Present</span>
+                        <span class="node-company-label">Tibicle</span>
                     </div>
                 </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
+
+                <!-- Mobile-Only Experience Tabs -->
+                <div class="mobile-experience-tabs show-on-mobile-flex">
+                    <button class="mobile-exp-tab" data-index="0">KarmaLeen</button>
+                    <button class="mobile-exp-tab" data-index="1">Codzgarage</button>
+                    <button class="mobile-exp-tab" data-index="2">Vrinsoft</button>
+                    <button class="mobile-exp-tab active" data-index="3">Tibicle</button>
+                </div>
+
+                <!-- Company Details Cards (Toggles active class dynamically) -->
+                <div class="wave-cards-viewport">
+                    <!-- KarmaLeen Card -->
+                    <div class="experience-card" data-index="0">
+                        <div class="exp-card-header">
+                            <div>
+                                <h3>Software Developer</h3>
+                                <span class="company">KarmaLeen Technology Pvt. Ltd. · Ahmedabad</span>
+                            </div>
+                            <span class="exp-date">Jul 2020 – Apr 2023 · 2 yrs 9 mos</span>
+                        </div>
+                        <ul class="exp-points">
+                            <li>Communicated directly with clients for requirement gathering, UI walkthroughs, and sprint delivery updates in an agile workflow.</li>
+                            <li>Built and shipped multiple production apps across various domains including fintech, productivity, and IoT.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Codzgarage Card -->
+                    <div class="experience-card" data-index="1">
+                        <div class="exp-card-header">
+                            <div>
+                                <h3>Software Developer</h3>
+                                <span class="company">Codzgarage Infotech Pvt. Ltd. · Ahmedabad</span>
+                            </div>
+                            <span class="exp-date">Apr 2023 – Feb 2024 · 10 mos</span>
+                        </div>
+                        <ul class="exp-points">
+                            <li>Partnered with QA teams to enforce coding standards and streamline defect resolution workflows across the development lifecycle.</li>
+                            <li>Contributed to multiple cross-functional projects ensuring on-time delivery and high-quality releases.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vrinsoft Card -->
+                    <div class="experience-card" data-index="2">
+                        <div class="exp-card-header">
                             <div>
                                 <h3>Senior Software Developer</h3>
-                                <span class="company">Vrinsoft Technology Pvt. Ltd. — Ahmedabad</span>
+                                <span class="company">Vrinsoft Technology Pvt. Ltd. · Ahmedabad</span>
                             </div>
-                            <span class="timeline-date">Feb 2024 – Dec 2025</span>
+                            <span class="exp-date">Feb 2024 – Dec 2025 · 1 yr 10 mos</span>
                         </div>
-                        <ul class="timeline-points">
+                        <ul class="exp-points">
                             <li>Mentored 2–3 junior developers on Clean Architecture, Flutter best practices, and code review standards, improving team code quality.</li>
                             <li>Delivered 5+ enterprise-grade Flutter applications with advanced features including AI integrations, real-time systems, and payment gateways.</li>
                             <li>Collaborated directly with international clients across sprint planning, requirement gathering, and seamless frontend-backend integration.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
+
+                    <!-- Tibicle Card -->
+                    <div class="experience-card active" data-index="3">
+                        <div class="exp-card-header">
                             <div>
-                                <h3>Software Developer</h3>
-                                <span class="company">Codzgarage Infotech Pvt. Ltd. — Ahmedabad</span>
+                                <h3>Senior Software Developer</h3>
+                                <span class="company">Tibicle LLP · Ahmedabad</span>
                             </div>
-                            <span class="timeline-date">Apr 2023 – Feb 2024</span>
+                            <span class="exp-date">Dec 2025 – Present</span>
                         </div>
-                        <ul class="timeline-points">
-                            <li>Partnered with QA teams to enforce coding standards and streamline defect resolution workflows across the development lifecycle.</li>
-                            <li>Contributed to multiple cross-functional projects ensuring on-time delivery and high-quality releases.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Software Developer</h3>
-                                <span class="company">KarmaLeen Technology Pvt. Ltd. — Ahmedabad</span>
-                            </div>
-                            <span class="timeline-date">Jul 2020 – Apr 2023</span>
-                        </div>
-                        <ul class="timeline-points">
-                            <li>Communicated directly with clients for requirement gathering, UI walkthroughs, and sprint delivery updates in an agile workflow.</li>
-                            <li>Built and shipped multiple production apps across various domains including fintech, productivity, and IoT.</li>
+                        <ul class="exp-points">
+                            <li>Leading full-cycle cross-platform development of Planboards (1,000+ downloads) — a Kanban productivity app for iOS, Android, Web, macOS, and tablets.</li>
+                            <li>Integrated AI voice-to-task feature using Google Vertex AI (Gemini) and OpenAI Whisper for intelligent task extraction from voice input.</li>
+                            <li>Implemented server-side in-app subscription system with receipt validation using Node.js Cloud Functions.</li>
                         </ul>
                     </div>
                 </div>
@@ -401,121 +473,50 @@
         <div class="section-container">
             <div class="section-header reveal">
                 <div class="section-label">Projects</div>
-                <h2 class="section-title">Featured Work</h2>
+                <h2 class="section-title">Portfolio & Featured Work</h2>
                 <p class="section-desc">Apps that made an impact — from 100K+ downloads to enterprise solutions.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card reveal reveal-delay-1">
-                    <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);">
-                        <i class="fas fa-chalkboard-task project-icon"></i>
-                        <span class="project-badge"><i class="fas fa-star"></i> 1,000+ Downloads</span>
+                
+                <!-- Filters and View Toggle -->
+                <div class="projects-controls">
+                    <div class="projects-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="featured">Featured Mobile</button>
+                        <button class="filter-btn" data-filter="additional">Additional Apps</button>
+                        <button class="filter-btn" data-filter="web">Web Projects</button>
                     </div>
-                    <div class="project-content">
-                        <h3>Planboards</h3>
-                        <p>Cross-platform Kanban productivity app (Trello-like) for iOS, Android, Web, macOS & tablets. Features AI voice-to-task, subscriptions, and real-time sync.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>RxDart</span>
-                            <span>Firebase</span>
-                            <span>Vertex AI</span>
-                            <span>OpenAI Whisper</span>
-                            <span>In-App Purchases</span>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-google-play"></i> Play Store</a>
-                            <a href="#" class="project-link"><i class="fab fa-app-store"></i> App Store</a>
-                            <a href="#" class="project-link"><i class="fas fa-globe"></i> Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-2">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);">
-                        <i class="fas fa-book-open project-icon"></i>
-                        <span class="project-badge"><i class="fas fa-fire"></i> 100,000+ Downloads</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>La Bonne Semence</h3>
-                        <p>Feature-rich storytelling app (Kindle-like) with audio streaming, multi-region localization, and daily content updates. Scaled to 100,000+ downloads.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Provider</span>
-                            <span>SQLite</span>
-                            <span>Push Notifications</span>
-                            <span>Audio Streaming</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-google-play"></i> Play Store</a>
-                            <a href="#" class="project-link"><i class="fab fa-app-store"></i> App Store</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-3">
-                    <div class="project-image" style="background: linear-gradient(135deg, #10b981, #059669, #047857);">
-                        <i class="fas fa-wine-bottle project-icon"></i>
-                        <span class="project-badge"><i class="fas fa-bolt"></i> Real-time</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>DioSync</h3>
-                        <p>Bluetooth-connected bar inventory management app for real-time bottle tracking. Features MVVM architecture with Firebase integration and push notifications.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Bluetooth Plus</span>
-                            <span>GetX</span>
-                            <span>SQLite</span>
-                            <span>Firebase</span>
-                            <span>MVVM</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-info-circle"></i> Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-1">
-                    <div class="project-image" style="background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6);">
-                        <i class="fas fa-handyman project-icon"></i>
-                        <span class="project-badge"><i class="fas fa-check-circle"></i> UrbanClap-style</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Upvoit</h3>
-                        <p>Service booking app (UrbanClap-inspired) with social login (Google, Apple), real-time push notifications, and Firebase-backed backend.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>BLoC / Cubit</span>
-                            <span>Firebase</span>
-                            <span>Social Login</span>
-                            <span>FCM</span>
-                            <span>MVVM</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-google-play"></i> Play Store</a>
-                            <a href="#" class="project-link"><i class="fab fa-app-store"></i> App Store</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card reveal reveal-delay-2">
-                    <div class="project-image" style="background: linear-gradient(135deg, #14b8a6, #0d9488, #0f766e);">
-                        <i class="fas fa-cow project-icon"></i>
-                        <span class="project-badge"><i class="fas fa-sync"></i> Mobile-Web Sync</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>MilkClub</h3>
-                        <p>Dairy industry app for learning, content creation, and information sharing with seamless mobile-web synchronization across platforms.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>GetX</span>
-                            <span>In-App WebView</span>
-                            <span>Deep Linking</span>
-                            <span>MVC</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-google-play"></i> Play Store</a>
-                            <a href="#" class="project-link"><i class="fab fa-app-store"></i> App Store</a>
-                        </div>
+                    <div class="view-toggle">
+                        <button class="toggle-btn active" id="carouselViewBtn" title="Carousel View">
+                            <i class="fas fa-images"></i>
+                        </button>
+                        <button class="toggle-btn" id="gridViewBtn" title="Grid View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+
+            <!-- Projects Display Container -->
+            <div class="projects-display-container reveal">
+                <!-- Carousel Layout -->
+                <div class="carousel-container" id="projectsCarousel">
+                    <button class="carousel-nav-btn prev" id="carouselPrevBtn" aria-label="Previous Project">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-viewport">
+                        <div class="projects-track" id="projectsTrack">
+                            <!-- Dynamic Cards populated by JS -->
+                        </div>
+                    </div>
+                    <button class="carousel-nav-btn next" id="carouselNextBtn" aria-label="Next Project">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Dot Indicators (for carousel) -->
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
         </div>
     </section>
 
@@ -531,13 +532,6 @@
                 <div class="contact-info reveal reveal-delay-1">
                     <h3>Get In Touch</h3>
                     <p>I'm always open to discussing new opportunities, freelance projects, or just a friendly chat about technology.</p>
-                    <a href="tel:+919106129524" class="contact-item">
-                        <div class="ci-icon"><i class="fas fa-phone"></i></div>
-                        <div class="ci-text">
-                            <h4>Phone</h4>
-                            <p>+91 9106129524</p>
-                        </div>
-                    </a>
                     <a href="mailto:amitprajapatimi4@gmail.com" class="contact-item">
                         <div class="ci-icon"><i class="fas fa-envelope"></i></div>
                         <div class="ci-text">
@@ -600,9 +594,7 @@
             <a href="https://github.com/amit-flutter" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/amitflutter/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:amitprajapatimi4@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+919106129524" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
             <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://medium.com" target="_blank" class="social-link" title="Medium"><i class="fab fa-medium"></i></a>
         </div>
     </div>
 
