@@ -8,6 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured JSON-LD Metadata Schema for ATS/SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Amit Prajapati",
+      "jobTitle": "Senior Mobile Developer",
+      "knowsAbout": ["Flutter", "React Native", "React.js", "Dart", "iOS", "Android", "Firebase", "TypeScript"],
+      "url": "https://amit-flutter.github.io"
+    }
+    </script>
 </head>
 <body>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -24,6 +36,7 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://drive.google.com/open?id=YOUR_RESUME_ID" target="_blank" class="nav-resume-btn"><i class="fas fa-file-arrow-down"></i> Resume</a></li>
                 <li><a href="#contact" class="nav-hire-btn">Hire Me</a></li>
+                <li><button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button></li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
                 <span></span>
@@ -58,7 +71,7 @@
                 </div>
                 <h1 class="hero-name">AMIT <span class="gradient-text">PRAJAPATI</span></h1>
                 <p class="hero-title">Senior Mobile Developer (Flutter & React)</p>
-                <p class="hero-description">Architecting high-performance, beautiful cross-platform mobile experiences with 5.5+ years of expertise. From robust Flutter applications to dynamic React Native solutions, I craft clean, scalable codebases that users love.</p>
+                <p class="hero-description">Architecting high-performance, beautiful cross-platform mobile experiences with <span class="dyn-sentence-exp">5.5+ years of expertise</span>. From robust Flutter applications to dynamic React Native solutions, I craft clean, scalable codebases that users love.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn-primary">
                         <i class="fas fa-rocket"></i> View Projects
@@ -72,7 +85,7 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <h3>5.5+</h3>
+                        <h3 class="dyn-years">5.5+</h3>
                         <p>Years Exp.</p>
                     </div>
                     <div class="stat-item">
@@ -147,13 +160,13 @@
                         </div>
                     </div>
                     <div class="about-exp-badge">
-                        <h4>5.5+</h4>
+                        <h4 class="dyn-years">5.5+</h4>
                         <p>Years Exp.</p>
                     </div>
                 </div>
                 <div class="about-content reveal reveal-delay-2">
                     <h2>Senior Mobile Developer based in <span class="gradient-text">Ahmedabad</span></h2>
-                    <p>I'm Amit Prajapati, a Senior Mobile Developer with over 5.5 years of experience building production-grade applications across iOS, Android, Web, and Desktop platforms using Flutter and React.</p>
+                    <p class="dyn-sentence-exp">I'm Amit Prajapati, a Senior Mobile Developer with over 5.5 years of experience building production-grade applications across iOS, Android, Web, and Desktop platforms using Flutter and React.</p>
                     <p class="hide-on-mobile">I've delivered 15+ apps including large-scale productivity tools, daily devotionals, IoT-enabled systems, and service booking networks. My expertise spans Clean Architecture, AI integrations (Gemini, OpenAI), real-time Bluetooth systems, and serverless backends.</p>
                     <p class="hide-on-mobile">I thrive in agile environments, leading teams, conducting code reviews, and managing full product lifecycles from requirements to App Store and Play Store deployment.</p>
                     <div class="about-highlights">
@@ -346,11 +359,12 @@
             <div class="section-header reveal">
                 <div class="section-label">Experience</div>
                 <h2 class="section-title">Professional Journey</h2>
-                <p class="section-desc">5.5+ years of building impactful products and leading teams.</p>
+                <p class="section-desc dyn-sentence-exp">5.5+ years of building impactful products and leading teams.</p>
             </div>
             <div class="wave-timeline-container reveal">
                 <!-- SVG Wave Line -->
                 <div class="wave-svg-container">
+                    <div class="wave-glow-dot" id="waveGlowDot"></div>
                     <svg viewBox="0 0 1000 200" preserveAspectRatio="none" class="wave-line-svg">
                         <!-- Curved Path representing valleys and peaks -->
                         <path d="M 0,100 C 150,20 200,180 350,100 C 500,20 550,180 700,100 C 850,20 900,180 1000,100" 
@@ -366,20 +380,20 @@
                         </defs>
                     </svg>
 
-                    <!-- Interactive Company Nodes along the wave curve -->
-                    <div class="wave-node" style="left: 15%; top: 35%;" data-index="0" title="KarmaLeen Technology">
+                    <!-- Interactive Company Nodes chronologically spaced along the wave curve -->
+                    <div class="wave-node" style="left: 10%; top: 35%;" data-index="0" title="KarmaLeen Technology">
                         <div class="node-dot"></div>
                         <span class="node-year">2020</span>
                         <span class="node-company-label">KarmaLeen</span>
                     </div>
                     
-                    <div class="wave-node" style="left: 40%; top: 60%;" data-index="1" title="Codzgarage Infotech">
+                    <div class="wave-node" style="left: 46%; top: 60%;" data-index="1" title="Codzgarage Infotech">
                         <div class="node-dot"></div>
                         <span class="node-year">2023</span>
                         <span class="node-company-label">Codzgarage</span>
                     </div>
                     
-                    <div class="wave-node" style="left: 65%; top: 32%;" data-index="2" title="Vrinsoft Technology">
+                    <div class="wave-node" style="left: 60%; top: 38%;" data-index="2" title="Vrinsoft Technology">
                         <div class="node-dot"></div>
                         <span class="node-year">2024</span>
                         <span class="node-company-label">Vrinsoft</span>
@@ -595,6 +609,17 @@
             <a href="https://www.linkedin.com/in/amitflutter/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:amitprajapatimi4@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Case Study Modal Overlay -->
+    <div class="case-study-modal" id="caseStudyModal">
+        <div class="modal-overlay" onclick="closeCaseStudy()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCaseStudy()" aria-label="Close Modal">&times;</button>
+            <div id="modalBody">
+                <!-- Dynamically populated via JS -->
+            </div>
         </div>
     </div>
 
