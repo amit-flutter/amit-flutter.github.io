@@ -74,6 +74,26 @@
             background: #ffffff;
         }
 
+        body.light-theme .skill-category {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        body.light-theme .skill-category:hover {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05), 
+                        0 0 20px var(--cat-glow, rgba(79, 70, 229, 0.08));
+        }
+        body.light-theme .experience-card {
+            background: rgba(255, 255, 255, 0.7);
+        }
+        body.light-theme .node-company-label {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-primary);
+        }
+        body.light-theme .mobile-exp-tab {
+            background: rgba(255, 255, 255, 0.75);
+            color: var(--text-secondary);
+        }
+
         html {
             scroll-behavior: smooth;
             scrollbar-width: thin;
@@ -297,6 +317,7 @@
         }
 
         .hero-container {
+            width: 100%;
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
@@ -805,7 +826,7 @@
         }
 
         .skill-category:hover .skill-cat-icon {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
             background: var(--cat-color);
             color: #fff;
         }
@@ -1024,6 +1045,13 @@
             opacity: 1;
             transform: translateY(0);
             animation: cardFadeIn 0.5s forwards;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .experience-card.active:hover {
+            transform: translateY(-5px) !important;
+            border-color: var(--accent-glow-strong);
+            box-shadow: var(--shadow-lg);
         }
 
         @keyframes cardFadeIn {
@@ -1605,6 +1633,7 @@
             display: flex;
             gap: 0.8rem;
             margin-top: auto;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -1618,7 +1647,7 @@
             padding: 0.55rem 1.1rem;
             border-radius: 8px;
             border: 1px solid var(--border);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
             background: rgba(10, 14, 23, 0.2);
         }
 
@@ -1627,6 +1656,53 @@
             border-color: var(--accent);
             background: var(--accent-glow);
             transform: translateY(-2px);
+        }
+
+        .project-link.store-link {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            background: rgba(10, 14, 23, 0.4);
+            border: 1px solid var(--border);
+        }
+
+        .project-link.play-store {
+            color: #34A853; /* Google Play Green */
+            border-color: rgba(52, 168, 83, 0.25);
+            background: rgba(52, 168, 83, 0.08);
+        }
+        .project-link.play-store:hover {
+            color: #ffffff !important;
+            background: #34A853 !important;
+            border-color: #34A853 !important;
+            box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3);
+        }
+
+        .project-link.app-store {
+            color: #0071e3; /* Apple App Store Blue */
+            border-color: rgba(0, 113, 227, 0.25);
+            background: rgba(0, 113, 227, 0.08);
+        }
+        .project-link.app-store:hover {
+            color: #ffffff !important;
+            background: #0071e3 !important;
+            border-color: #0071e3 !important;
+            box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+        }
+
+        .project-link.website-link {
+            color: #6366f1; /* Website Indigo */
+            border-color: rgba(99, 102, 241, 0.25);
+            background: rgba(99, 102, 241, 0.08);
+        }
+        .project-link.website-link:hover {
+            color: #ffffff !important;
+            background: #6366f1 !important;
+            border-color: #6366f1 !important;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
         }
 
         /* Contact Section */
@@ -1857,8 +1933,14 @@
             transform: translateY(-3px);
         }
 
-        .tech-item i {
-            font-size: 2.5rem;
+        .tech-item i,
+        .tech-item svg {
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .tech-item:hover i,
+        .tech-item:hover svg {
+            transform: scale(1.15) rotate(5deg);
         }
 
         .tech-item span {
@@ -1933,6 +2015,14 @@
             }
             .show-on-mobile-flex {
                 display: flex !important;
+            }
+
+            .carousel-nav-btn {
+                display: none !important;
+            }
+
+            .hero-container {
+                padding: 0;
             }
 
             /* Collapsible Skills secondary categories on Mobile */
@@ -2071,6 +2161,10 @@
 
             .hero-buttons {
                 flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
             }
 
             .btn-primary, .btn-secondary {

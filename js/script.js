@@ -233,23 +233,48 @@ revealElements.forEach(el => revealObserver.observe(el));
 // Interactive Wave Timeline Node Hover/Click Handlers
 const waveNodes = document.querySelectorAll('.wave-node');
 const expCards = document.querySelectorAll('.experience-card');
+const mobileExpTabs = document.querySelectorAll('.mobile-exp-tab');
 
+// Helper to update active experience tab/card/node by index
+function setActiveExperience(index) {
+    // Update desktop wave timeline nodes
+    waveNodes.forEach(n => {
+        n.classList.remove('active');
+        if (n.getAttribute('data-index') === index) {
+            n.classList.add('active');
+        }
+    });
+
+    // Update mobile tab buttons
+    mobileExpTabs.forEach(t => {
+        t.classList.remove('active');
+        if (t.getAttribute('data-index') === index) {
+            t.classList.add('active');
+            // Smoothly scroll active tab into view horizontally (centers it)
+            t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+    });
+
+    // Update experience detail cards
+    expCards.forEach(card => {
+        card.classList.remove('active');
+        if (card.getAttribute('data-index') === index) {
+            card.classList.add('active');
+        }
+    });
+}
+
+// Attach listeners to desktop nodes
 waveNodes.forEach(node => {
-    const selectNode = () => {
-        waveNodes.forEach(n => n.classList.remove('active'));
-        node.classList.add('active');
-        
-        const index = node.getAttribute('data-index');
-        expCards.forEach(card => {
-            card.classList.remove('active');
-            if (card.getAttribute('data-index') === index) {
-                card.classList.add('active');
-            }
-        });
-    };
-    
-    node.addEventListener('mouseenter', selectNode);
-    node.addEventListener('click', selectNode);
+    const index = node.getAttribute('data-index');
+    node.addEventListener('mouseenter', () => setActiveExperience(index));
+    node.addEventListener('click', () => setActiveExperience(index));
+});
+
+// Attach listeners to mobile tabs
+mobileExpTabs.forEach(tab => {
+    const index = tab.getAttribute('data-index');
+    tab.addEventListener('click', () => setActiveExperience(index));
 });
 
 // ----------------------------------------------------
@@ -504,13 +529,13 @@ function renderProjects() {
         
         let linksHTML = '';
         if (p.links.playStore) {
-            linksHTML += `<a href="${p.links.playStore}" target="_blank" class="project-link"><i class="fab fa-google-play"></i> Play Store</a>`;
+            linksHTML += `<a href="${p.links.playStore}" target="_blank" class="project-link store-link play-store" title="Google Play Store"><i class="fab fa-google-play"></i></a>`;
         }
         if (p.links.appStore) {
-            linksHTML += `<a href="${p.links.appStore}" target="_blank" class="project-link"><i class="fab fa-app-store"></i> App Store</a>`;
+            linksHTML += `<a href="${p.links.appStore}" target="_blank" class="project-link store-link app-store" title="Apple App Store"><i class="fab fa-app-store"></i></a>`;
         }
         if (p.links.website) {
-            linksHTML += `<a href="${p.links.website}" target="_blank" class="project-link"><i class="fas fa-globe"></i> Website</a>`;
+            linksHTML += `<a href="${p.links.website}" target="_blank" class="project-link store-link website-link" title="Website"><i class="fas fa-globe"></i></a>`;
         }
         
         const card = document.createElement('div');
